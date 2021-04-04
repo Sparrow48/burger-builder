@@ -6,14 +6,18 @@ import BuildControl from "./BuildControl/BuildControl";
 const control = [
   { label: "Salad", type: "salad" },
   { label: "Cheese", type: "cheese" },
-  { label: "Becon", type: "becon" },
+  { label: "Bacon", type: "bacon" },
   { label: "Meat", type: "meat" },
 ];
 
 const buildControls = props => (
   <div className={classes.BuildControls}>
     {control.map(ctrl => (
-      <BuildControl key={ctrl.label} label={ctrl.label} />
+      <BuildControl
+        key={ctrl.label}
+        label={ctrl.label}
+        added={() => props.added(ctrl.type)}
+      />
     ))}
   </div>
 );
