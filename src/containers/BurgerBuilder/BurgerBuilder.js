@@ -53,6 +53,9 @@ class BurgerBuilder extends Component {
       this.setState({ ingredients: updateIngredients, totalPrice: newPrice });
     }
   };
+
+  purchaseable = () => {};
+
   render() {
     const disabledInfo = {
       ...this.state.ingredients,
@@ -60,7 +63,6 @@ class BurgerBuilder extends Component {
 
     for (let key in disabledInfo) {
       disabledInfo[key] = disabledInfo[key] <= 0;
-      console.log(disabledInfo[key]);
     }
     return (
       <Aux>
@@ -69,6 +71,7 @@ class BurgerBuilder extends Component {
           added={this.addIngredientHandlre}
           removed={this.removeIngredientHandler}
           disabled={disabledInfo}
+          purchaseable={this.state.totalPrice <= 25}
           price={this.state.totalPrice}
         />
       </Aux>
