@@ -3,7 +3,7 @@ import React from "react";
 import Aux from "../../hoc/aux";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import classes from "./Layout.module.css";
-import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
+import SideDrawer from "../Navigation/NavigationItems/SideDrawer/SideDrawer";
 
 const layout = props => (
   <Aux>
