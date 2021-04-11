@@ -5,8 +5,10 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 
 const navigationItems = props => (
   <ul className={classes.NavigationItems}>
-    <NavigationItem>Burger Builder</NavigationItem>
-    <NavigationItem>Check Out</NavigationItem>
+    <NavigationItem link={"/"} active>
+      Burger Builder
+    </NavigationItem>
+    <NavigationItem link={"/"}>Check Out</NavigationItem>
   </ul>
 );
 
