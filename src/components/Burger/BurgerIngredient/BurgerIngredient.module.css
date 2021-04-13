@@ -110,3 +110,16 @@
   background: linear-gradient(#bf3813, #c45e38);
   margin: 2% auto;
 }
+
+.Egg {
+  width: 70%;
+  height: 2%;
+  background: linear-gradient(#af601a, #a04000);
+  margin: 2% auto;
+}
+.Vegetable {
+  width: 80%;
+  height: 3%;
+  background: linear-gradient(#004d00, #003300);
+  margin: 2% auto;
+}
