@@ -7,7 +7,7 @@ import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder";
 class App extends Component {
   render() {
     return (
-      <div className={classes.App}>
+      <div className={classes.App} style={{ overflow: "hidden" }}>
         <Layout>
           <BurgerBuilder />
         </Layout>

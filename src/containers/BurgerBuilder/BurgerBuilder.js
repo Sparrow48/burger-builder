@@ -11,6 +11,8 @@ const INGREDIENT_PRICES = {
   cheese: 8,
   bacon: 8,
   meat: 30,
+  egg: 15,
+  vagitable: 12,
 };
 
 class BurgerBuilder extends Component {
@@ -20,6 +22,8 @@ class BurgerBuilder extends Component {
       cheese: 0,
       bacon: 0,
       meat: 0,
+      egg: 0,
+      vagitable: 0,
     },
     totalPrice: 25,
     purchaseable: false,
