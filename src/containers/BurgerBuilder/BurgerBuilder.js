@@ -30,7 +30,9 @@ class BurgerBuilder extends Component {
 
   componentDidMount() {
     axios
-      .get("https://my-burger-476a5-default-rtdb.firebaseio.ingredients.json")
+      .get(
+        "https://my-burger-476a5-default-rtdb.firebaseio.com/ingredients.json"
+      )
       .then(response => {
         this.setState({ ingredients: response.data });
       })
@@ -112,7 +114,7 @@ class BurgerBuilder extends Component {
       deliveryMethod: "fastest",
     };
     axios
-      .post("/orders", order)
+      .post("/orders.json", order)
       .then(Response => this.setState({ loading: false, purchasing: false }))
       .catch(error => this.setState({ loading: false, purchasing: false }));
   };
