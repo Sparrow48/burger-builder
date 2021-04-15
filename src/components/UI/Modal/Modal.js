@@ -17,7 +17,7 @@ class Modal extends Component {
       <Aux>
         <Backdrop
           show={this.props.show}
-          cancelBackDrop={this.props.cancelPurchase}
+          cancelBackDrop={this.props.cancelBackDrop}
         />
         <div
           className={classes.Modal}
