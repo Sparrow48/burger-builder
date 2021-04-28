@@ -103,7 +103,7 @@ class ContactData extends Component {
         },
         value: "fastest",
         validation: {},
-        valid: false,
+        valid: true,
       },
     },
     formIsValid: false,
