@@ -20,13 +20,17 @@ const rootReducer = combineReducers({
 });
 
 //const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers =
+  process.env.NODE_ENV === "development"
+    ? composeWithDevTools(
+        applyMiddleware(thunk)
+        // other store enhancers if any
+      )
+    : null;
 
 const store = createStore(
   rootReducer,
-  composeWithDevTools(
-    applyMiddleware(thunk)
-    // other store enhancers if any
-  )
+  composeEnhancers
   //composeEnhancers(applyMiddleware(thunk))
 );
 
