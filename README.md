@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live link: [Burger builder](https://my-burger-476a5.web.app/)
+
+## Login details
+
+### UserName: test@test.com
+
+### Password: 123456
+
 ## Available Scripts
 
 In the project directory, you can run:

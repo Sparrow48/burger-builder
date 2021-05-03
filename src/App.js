@@ -9,6 +9,7 @@ import Orders from "./containers/Orders/Orders";
 import Auth from "./containers/Auth/Auth";
 import Logout from "./containers/Auth/Logout/Logout";
 import * as actions from "./store/actions/index";
+import classes from "./App.module.css";
 
 class App extends Component {
   componentDidMount() {
@@ -37,7 +38,7 @@ class App extends Component {
     }
 
     return (
-      <div>
+      <div className={classes.App}>
         <Layout>{routes}</Layout>
       </div>
     );
