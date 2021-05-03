@@ -70,7 +70,7 @@ class BurgerBuilder extends Component {
     if (this.props.ings) {
       burger = (
         <Aux>
-          <Burger ingredients={this.props.ings} />
+          <Burger ingredients={this.props.ingA} />
           <BuildControls
             ingredientAdded={this.props.onIngredientAdded}
             ingredientRemoved={this.props.onIngredientRemoved}
@@ -113,6 +113,7 @@ const mapStateToProps = state => {
     price: state.burgerBuilder.totalPrice,
     error: state.burgerBuilder.error,
     isAuthenticated: state.auth.token !== null,
+    ingA: state.burgerBuilder.ingArray,
   };
 };
 

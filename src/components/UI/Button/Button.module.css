@@ -21,8 +21,14 @@
 
 .Success {
   color: #5c9210;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  border-radius: 5px;
 }
 
 .Danger {
   color: #944317;
+  box-shadow: 0 2px 3px #ccc;
+  border: 1px solid #eee;
+  border-radius: 5px;
 }

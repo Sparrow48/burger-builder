@@ -3,6 +3,7 @@ import { updateObject } from "../../shared/utility";
 
 const initialState = {
   ingredients: null,
+  ingArray: [],
   totalPrice: 25,
   error: false,
   building: false,
@@ -18,6 +19,8 @@ const INGREDIENT_PRICES = {
 };
 
 const addIngredient = (state, action) => {
+  state.ingArray.unshift(action.ingredientName);
+
   const updatedIngredient = {
     [action.ingredientName]: state.ingredients[action.ingredientName] + 1,
   };
@@ -27,10 +30,25 @@ const addIngredient = (state, action) => {
     totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName],
     building: true,
   };
+  console.log(state.ingArray);
+
   return updateObject(state, updatedState);
 };
 
 const removeIngredient = (state, action) => {
+  //const revArr = state.ingArray.reverse();
+
+  for (let key in state.ingArray) {
+    if (state.ingArray[key] === action.ingredientName) {
+      state.ingArray.splice(key, 1);
+      break;
+    }
+  }
+
+  //state.ingArray = revArr.reverse();
+
+  console.log(state.ingArray);
+
   const updatedIng = {
     [action.ingredientName]: state.ingredients[action.ingredientName] - 1,
   };
@@ -53,6 +71,7 @@ const setIngredients = (state, action) => {
       egg: action.ingredients.egg,
       vegetable: action.ingredients.vegetable,
     },
+    ingArray: [],
     totalPrice: 25,
     error: false,
     building: false,

@@ -121,6 +121,7 @@ class ContactData extends Component {
     }
     const order = {
       ingredients: this.props.ings,
+      ingredientsInOrder: this.props.ingA.reverse(),
       price: this.props.price,
       orderData: formData,
       userId: this.props.userId,
@@ -210,6 +211,7 @@ const mapStateToProps = state => {
     loading: state.order.loading,
     token: state.auth.token,
     userId: state.auth.userId,
+    ingA: state.burgerBuilder.ingArray,
   };
 };
 
